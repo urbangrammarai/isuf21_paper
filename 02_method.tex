@@ -4,13 +4,81 @@
 % - spatial signatures
 % -- SS as a characterisation of space based on F and F - very brief intro
 % -- components can be studies independently
-% -- this paper focuses on form component only
+%   -- this paper focuses on form component only
+Urban morphology tends to consider form only when trying to understand urban
+environment, leaving aside its functional aspects from population and amenities to green
+and blue spaces. However, one can argue that only combination of form and function can
+provide deeper insights into the complexity of cities. The notion of \textit{spatial
+signatures} combines both aspects into a single model, defined as:
 
-% - spatial unit
-% -- spatial unit criteria
-% -- issues with available units
-% -- proposal of enclosed tessellation
-% -- brief description and a reference to conceptual?
+\newtheorem*{theorem}{}
+\begin{theorem}
+    A characterisation of space based on form and function designed to understand urban
+environments
+\end{theorem}
+
+Spatial signatures then provide a typology of space defined by both form and function
+together, encoding the interplay between the two. On the other hand, not all questions
+can be answered using both components at the same time. Each of them, form as well as
+function, can be studied independently when needed. This paper explores form component
+of spatial signatures characterisation and derives form-based signatures as a
+single-aspect classification of space.
+
+% - spatial unit -- spatial unit criteria -- issues with available units -- proposal of
+%   enclosed tessellation -- brief description and a reference to conceptual?
+Spatial signatures are conceptually defined as an aggregation of granular elements into
+contiguous areas based on the homogeneity of their characterisation. That poses a first
+methodological question - which spatial unit should be used for capturing of such
+characterisation? The optimal unit should be \textit{indivisible} - when split into
+smaller components, none of them would be enough to encode character of a signature;
+\textit{internally consistent} - each observation should reflect single signature type;
+and geographically \textit{exhaustive} - every location in the area of interest, both
+built-up and un-built, should be covered.
+
+Literature tends to be split into three groups when it comes to unit of analysis. One
+uses predefined administrative boundaries (REF) but that can be seen as a suboptimal
+solution as their definition follows different goals and some even argue that
+“administrative units obscure morphologic reality” \citep{taubenbock2019new}. The other
+employs uniform grids, in some cases linked to a spatial index (like hexagonal H3 grid
+\citep{brodsky2018h3}) or to other types of data commonly distributed on grids (e.g.
+\cite{jochem2020}). However, grids cells are rarely indivisible and often internally
+inconsistent as their definition does not reflect the spatial configuration on the
+ground. The most common approach in urban morphology is to use structural elements as
+buildings \citep{hamaina2012a}, street segments \citep{araldi2019} or plots
+\citep{berghauserpont2019a} as a unit. However, these are not exhaustive as they are not
+present in un-built areas. Plots would theoretically provide geographical exhaustiveness
+but since their conceptual definition is not stable and geometric representation varies
+\citep{kropf2018plots}, they are unfit for a large scale analysis.
+
+We propose to use an alternative spatial unit named \textit{enclosed tessellation cell}
+(EC), defined as:
+
+\begin{theorem}
+    The portion of space that results from growing a morphological tesselation within an
+enclosure delineated by a series of natural or built barriers identified from the
+literature on urban form, function and perception.
+\end{theorem}
+
+\martin{We should somehow cite the conceputal paper when we talk about signatures and EC}
+
+The ECs are generated in three steps. First, a defined set of spatial features, that
+divide space into smaller parts, is integrated into a single set of boundaries. Such
+boundaries are usually formed by linear features as street network, railway or rivers.
+Second, these boundaries are used to subdivide space into \textit{enclosures}, a smaller
+areas delimited from all sides by at least one boundary feature. Third, enclosures are
+combined with building footprints taking the role of anchors in space and subdivided
+into ECs based on proximity to each building, using a morphological tesselation
+algorithm \citep{fleischmann2020morphological}.
+
+\martin{Figure?}
+
+Resulting ECs are indivisible and internally consistent, as they are very granular and
+linked at maximum to a single building, and exhaustive as they cover entirety of space
+thanks to contiguous geometry of enclosures. Their structure and scale adapts to the
+environment and can take a form of a small-scale granular mesh in city centres of
+historical origin as well as large-scale polygons encoding the vast natural open spaces.
+
+% - case study - GB
 
 % - data
 % -- input data in general
@@ -18,6 +86,8 @@
 % -- OS Open Map
 % --- potential limitation of open data
 % -- OS Open Roads
+
+
 
 % - morphometrics
 % -- characterisation of building patterns using morphometrics
