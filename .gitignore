@@ -143,3 +143,4 @@ book/_build
 # dask
 dask-worker-space
 
+fig/figures.afdesign
