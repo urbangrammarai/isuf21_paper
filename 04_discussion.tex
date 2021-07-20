@@ -5,19 +5,69 @@
 % -- conceptual similarity with morphological region, urban tissue and similar
 % -- differences between the concepts and resulting complimentarity
     % different scales, different purposes, different questions
+Spatial signatures, either based on a combination form and function or one components
+only, aim to identify and delineate recurring patterns of the built environment. As
+such, they are deeply embedded in the tradition of urban morphology directly related to
+established concepts like morphological region, urban tissue and similar. All aim to
+determine which areas of cities are internally more similar that they would be to any
+other place. At the same time, the concepts and their methods are not same and will
+undoubtedly produce a variation in the classification of urban form. Where
+historico-geographical morphological region would detect original development and its later
+expansion following the same pattern as two distinct areas (due to a different
+historical origin), form-based signatures would result in a single area as the pattern
+is homogenous. Which of the two is the \textit{correct} answer then fundamentally
+depends on the question asked. Each of the concepts and related methods of their
+analysis are bound to different scales, purposes and questions and are complimentary
+rather than competing.
 
-% - scalability of morphological studies
-% -- we can ask questions about larger patterns that we did before
-% -- we can look into cross-national similarities and tendencies
 
 % - reproducibility of morphological studies
 % -- morphometric methods can be algorithmised, hence easily replicable and reproducible
+Unlike traditional urban morphology that based mostly on qualitative methods requiring a
+high degree of expert knowledge and interpretation, morphometric studies offer a high
+degree of reproducibility and replicability. The methods are often fully written as
+Python (as in case of this research) or R code, which given the same data on input
+produces the same results and given similar data for a different case study area should
+produce comparable results. The stability and reliability of the method is especially
+important in the policy-making context which needs to be consistent across years and
+updates of supporting morphological data.
 
 % - limits
 % -- in the context of morphometrics
 % --- suboptimal data input (individual buildings)
-% --- national extent and hence resolution of clustering - local differences may be smoothed out as insignificant from the national perspective
-% -- in the context of morphology
-% --- interpretability of classes
+%   --- national extent and hence resolution of clustering - local differences may be
+%   smoothed out as insignificant from the national perspective
 % --- precision of boundary placement
 
+Morphometric approaches have their limitations, related to the the dependency on the
+quality of input data as well as the behaviour of used algorithms. Suboptimal data
+input can significantly affect the performance of signature detection. Take, for example,
+the quality of building footprints as one of the most utilised data source. While there
+is a wide range of reliable, mostly governmental or municipal, sources of data, that
+does not apply to every place and dataset. Some, like OpenStreetMap, provide highly
+inconsistent data with some buildings drawn in a high detail or even subdivided into
+multiple parts based on variable building height, other do not distinguish between
+individual buildings and provide a single geometry for the whole block composed on
+multiple street fronts and buildings.
+
+Algorithms used to classify features into signatures also make a difference, especially
+on the national scale shown in this paper. The classification and to a degree a
+\textit{resolution} of clustering is done on a national level, that may result in local
+differences being smoothed out as insignificant from the national perspective. The zoom
+into individual neighbourhoods then may seem to be coarse in terms of identified
+signatures. Same applies to the placement of the boundaries between signature types.
+Trained urban morphologist or urban designer would likely question why one building
+belongs to a type A while the other within the same block to a type B but we have to
+keep in mind the algorithmic nature of the work providing a prediction more than
+anything else.
+
+% - scalability of morphological studies
+% -- we can ask questions about larger patterns that we did before
+% -- we can look into cross-national similarities and tendencies
+However, the significant difference between the presented method and traditional
+morphology is the scalability of the analysis. With national-scale data we can ask
+questions about much larger patterns than we did before. Obtaining the analysis covering
+the same extent as the one just presented in the same level of detail using
+historico-geographical or typo-morphological methods would be simply an unfeasible task.
+With morphometric methods we can start looking into cross-national similarities and
+tendencies in urban development on the neighbourhood-like scale signatures provide.
