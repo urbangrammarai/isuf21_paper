@@ -61,16 +61,25 @@ literature on urban form, function and perception.
 
 \martin{We should somehow cite the conceputal paper when we talk about signatures and EC}
 
-The ECs are generated in three steps. First, a defined set of spatial features, that
-divide space into smaller parts, is integrated into a single set of boundaries. Such
-boundaries are usually formed by linear features as street network, railway or rivers.
-Second, these boundaries are used to subdivide space into \textit{enclosures}, a smaller
-areas delimited from all sides by at least one boundary feature. Third, enclosures are
-combined with building footprints taking the role of anchors in space and subdivided
-into ECs based on proximity to each building, using a morphological tesselation
-algorithm \citep{fleischmann2020morphological}.
+The ECs are generated in three steps illustrated on a figure \ref{fig:et_diagram}.
+First, a defined set of spatial features that divide space into smaller parts
+(\ref{fig:et_diagram}A) is integrated into a single set of boundaries
+(\ref{fig:et_diagram}B). Such boundaries are usually formed by linear features as street
+network, railway or rivers. Second, these boundaries are used to subdivide space into
+\textit{enclosures}, a smaller areas delimited from all sides by at least one boundary
+feature (\ref{fig:et_diagram}C). Third, enclosures are combined with building footprints
+taking the role of anchors in space and subdivided into ECs based on proximity to each
+building, using a morphological tesselation algorithm
+\citep{fleischmann2020morphological} (\ref{fig:et_diagram}D).
 
-\martin{Figure?}
+\begin{figure}
+    \includegraphics[width=\linewidth]{figures/et_diagram.pdf}
+    \caption{Diagram illustrating the sequential steps leading to the delineation of
+    enclosed tessellation. From a series of enclosing components, where blue are streets
+    and yellow river banks (A), to enclosures (B), incorporation of buildings as anchors
+    (C) to final tessellation cells (D).}
+    \label{fig:et_diagram}
+\end{figure}
 
 Resulting ECs are indivisible and internally consistent, as they are very granular and
 linked at maximum to a single building, and exhaustive as they cover entirety of space
