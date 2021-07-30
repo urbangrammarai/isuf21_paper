@@ -5,30 +5,32 @@
 % -- conceptual similarity with morphological region, urban tissue and similar
 % -- differences between the concepts and resulting complimentarity
     % different scales, different purposes, different questions
-Spatial signatures, either based on a combination form and function or one components
-only, aim to identify and delineate recurring patterns of the built environment. As
-such, they are deeply embedded in the tradition of urban morphology directly related to
-established concepts like morphological region, urban tissue and similar. All aim to
-determine which areas of cities are internally more similar that they would be to any
-other place. At the same time, the concepts and their methods are not same and will
-undoubtedly produce a variation in the classification of urban form. Where
-historico-geographical morphological region would detect original development and its later
-expansion following the same pattern as two distinct areas (due to a different
-historical origin), form-based signatures would result in a single area as the pattern
+The spatial signatures framework, either based on a combination form and function or a
+single component, aims to identify and delineate recurring patterns of urban
+spaces. As
+such, it is deeply embedded in the tradition of urban morphology, directly related to
+established concepts like morphological region, urban tissue and similar. All
+of them aim to
+determine which areas of cities are internally consistent. The differences
+between these perspectives stem from the methods they rely on, which
+undoubtedly results in variation in the classifications of urban form they
+produce. Where
+historico-geographical morphological region would detect the original development and its later
+expansion following a similar pattern as two distinct areas (due to a different
+historical origin), the morphosignatures would class them in a single area as the pattern
 is homogenous. Which of the two is the \textit{correct} answer then fundamentally
 depends on the question asked. Each of the concepts and related methods of their
-analysis are bound to different scales, purposes and questions and are complimentary
+analysis are bound to different scales, purposes and questions, and are complimentary
 rather than competing.
 
 
 % - reproducibility of morphological studies
 % -- morphometric methods can be algorithmised, hence easily replicable and reproducible
-Unlike traditional urban morphology that is based mostly on qualitative methods requiring an
+Unlike traditional urban morphology that is based mostly on qualitative methods requiring 
  expert knowledge and interpretation, morphometric studies offer a high
-degree of reproducibility and replicability. The methods are often fully written as
-Python (as in case of this research) or R code, which given the same data on input
-produces the same results and given similar data for a different case study area should
-produce comparable results. The stability and reliability of the method is especially
+degree of reproducibility and scalability. Methods are often embedded in
+computer code release under open licenses which, given the same input data,
+produces the same results. This reliability of the method is especially
 important in the policy-making context which needs to be consistent across years and
 updates of supporting morphological data.
 
@@ -40,39 +42,47 @@ updates of supporting morphological data.
 % --- precision of boundary placement
 
 Morphometric approaches have their limitations, related to the the dependency on the
-quality of input data as well as the behaviour of used algorithms. Suboptimal data
-input can significantly affect the performance of signature detection. Take, for example,
+quality of input data as well as the behaviour of used algorithms. Suboptimal
+input data can significantly affect the performance of morphosignature detection. Take, for example,
 the quality of building footprints as one of the most utilised data source. While there
-is a wide range of reliable, mostly governmental or municipal, sources of data, that
-does not apply to every place and dataset. Some, like OpenStreetMap, provide highly
-inconsistent data with some buildings drawn in a high detail or even subdivided into
-multiple parts based on variable building height, other do not distinguish between
-individual buildings and provide a single geometry for the whole block composed on
-multiple street fronts and buildings.
+is a wide range of reliable, mostly governmental or municipal, sources of data
+for some regions of the world, this is not the case everywhere. Some sources, like OpenStreetMap, provide highly
+inconsistent data, with some buildings drawn in high detail and others in very
+coarse ways. Fortunately, technology is moving very rapidly and advances in
+data collection and creation (e.g. building footprints derived from satellite
+imagery) may change this landscape for the better in the coming years.
 
-Algorithms used to classify features into signatures also make a difference, especially
-on the national scale shown in this paper. The classification and to a degree a
-\textit{resolution} of clustering is done on a national level, that may result in local
-differences being smoothed out as insignificant from the national perspective. The zoom
-into individual neighbourhoods then may seem to be coarse in terms of identified
-signatures. Same applies to the placement of the boundaries between signature types.
-Trained urban morphologist or urban designer would likely question why one building
-belongs to a type A while the other within the same block to a type B but we have to
-keep in mind the algorithmic nature of the work providing a prediction more than
-anything else.
+The algorithms used to classify features into morphosignatures also make a
+difference, as does the scale at which an analysis is run.
+Our classification and, to a degree, the
+\textit{resolution} at which the clustering is done is national. This choice may result in local
+differences being smoothed out if they are less relevant from the national
+perspective. Zooming into individual neighbourhoods, one may find some of the
+decisions made by the algorithm too coarse. The same applies to the placement of the boundaries between morphosignatures.
+The trained urban morphologist or urban designer might question why one building
+belongs to a type A, while the other one within the same block is assigned to
+type B. It is important to
+keep in mind the scale and goal of the classification, which is then embedded
+in the algorithmic choices.
 
 % - scalability of morphological studies
 % -- we can ask questions about larger patterns that we did before
 % -- we can look into cross-national similarities and tendencies
-However, the significant difference between the presented method and traditional
-morphology is the scalability of the analysis. With national-scale data we can ask
-questions about much larger patterns than we did before. Obtaining the analysis covering
-the same extent as the one just presented in the same level of detail using
+Our main contribution with respect to traditional
+morphological studies resides in the scalability of the analysis. With national-scale data we can ask
+fundamentally new questions about the emergin patterns than is possible with
+smaller scales. Obtaining the analysis covering
+the same extent as the one just presented at the same level of detail using
 historico-geographical or typo-morphological methods would be simply an unfeasible task.
-With morphometric methods we can start looking into cross-national similarities and
-tendencies in urban development on the neighbourhood-like scale signatures provide
+Morphometrics allows us to begin considering cross-national comparisons that
+consider detail at neighbourhood-like scale.
+%
+As we develop more fine grained and scalable classifications, an
+important challenge will be to devise ways that allow us to blend the
+insights we can gain at this scale with the body of knowledge developed over
+time from more qualitative approaches.
 
 \section{Data and code availability}
 The repository, containing reproducible code in Jupyter notebooks is available at
-urbangrammarai.github.io. Resulting classification is released as an open data product
-available at ADD.
+\url{https://urbangrammarai.github.io}. Guidelines on how to access and
+download the resulting classification are available in the same website.
